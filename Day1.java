@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 //Problem Statement : https://adventofcode.com/2022/day/1
-// Part-1: Sum together groups of numbers that represent calorie counts, and find the largest sum.
+// Part-1: Calculate the sum of numbers that represent calorie counts, and find the largest sum.
 // Part-2: Instead of finding the single largest value, calculate the sum of top 3 largest values
 public class Day1 {
 
