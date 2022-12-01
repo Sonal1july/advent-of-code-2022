@@ -4,6 +4,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
+//Problem Statement : https://adventofcode.com/2022/day/1
+// Part-1: Sum together groups of numbers that represent calorie counts, and find the largest sum.
+// Part-2: Instead of finding the single largest value, calculate the sum of top 3 largest values
 public class Day1 {
 
 	public static void main(String[] args) throws Exception {
@@ -17,12 +20,12 @@ public class Day1 {
 				totalCalories += Integer.valueOf(calorie);
 			} else {
 				elves.add(totalCalories);
+				totalCalories = 0;
 			}
 		}
 		Collections.sort(elves, Collections.reverseOrder());
-		System.out.print(elves.get(0) + " calories are being carried by the Elf carrying the most Calories"); // Part-1
-
-		System.out.print("Sum of top 3 calories " + elves.stream().mapToInt(Integer::intValue).limit(3).sum()); // Part-2
+		System.out.print(elves.get(0) + " calories are being carried by the Elf carrying the most Calories");  
+		System.out.print("Sum of top 3 calories " + elves.stream().mapToInt(Integer::intValue).limit(3).sum()); 
 
 	}
 }
