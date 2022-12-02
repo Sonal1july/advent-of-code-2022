@@ -7,7 +7,6 @@ import java.util.Scanner;
 //Problem Statement: https://adventofcode.com/2022/day/2
 
 public class Part1 {
-
 	public static void main(String[] args) throws Exception {
 		File file = new File("C:\\Users\\sgupta4\\Downloads\\input.txt");
 		Scanner sc = new Scanner(file);
@@ -19,10 +18,9 @@ public class Part1 {
 			int y = c[1].charAt(0) - 'X';
 			if (x == y)
 				sum += 3;
-			else if ((y - x == 1) || (x == 2 && y == 0))
+			else if (y == (x + 1) % 3)
 				sum += 6;
 			sum += y + 1;
-
 		}
 		System.out.println(sum);
 	}
